@@ -1,106 +1,32 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yara| Yara</title>
-  <meta name="description" content="Editorial portfolio for a creative director in luxury watches." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header" id="nav">
-    <a class="brand" href="#home" aria-label="Home">AV.</a>
-    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">Menu</button>
-    <nav class="site-nav" aria-label="Primary navigation">
-      <a href="#about">About</a>
-      <a href="#clients">Clients</a>
-      <a href="#projects">Work</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+
+  <nav id="site-nav" class="nav" role="navigation" aria-label="Main navigation"></nav>
 
   <main>
-    <section id="home" class="hero">
-      <div class="hero-center reveal">
-        <div class="hero-tag"><span></span><p>Creative Director — Horology, Art Direction & Editorial</p></div>
-        <h1>Aurelia<br><em>/</em>Vale</h1>
-      </div>
-      <div class="hero-bottom reveal">
-        <p>Visual language for luxury watches. Product-first image systems based between Dubai, Paris and Geneva.</p>
-        <a href="#projects">View selected work <span></span></a>
-      </div>
-    </section>
-
-    <div class="marquee" aria-hidden="true"><div>
-      <span>Yara</span><i></i><span>Watch Campaigns</span><i></i><span>Editorial Design</span><i></i><span>Launch Systems</span><i></i><span>Still Life</span><i></i><span>Retail Worlds</span><i></i><span>Luxury Brands</span><i></i><span>Macro Detail</span><i></i>
-      <span>Art Direction</span><i></i><span>Watch Campaigns</span><i></i><span>Editorial Design</span><i></i><span>Launch Systems</span><i></i><span>Still Life</span><i></i><span>Retail Worlds</span><i></i><span>Luxury Brands</span><i></i><span>Macro Detail</span><i></i>
-    </div></div>
-
-    <section id="about" class="about section-pad on-light reveal">
-      <p class="section-label">About</p>
-      <div class="about-layout">
-        <div>
-          <h2>Precision images for mechanical desire.</h2>
-          <div class="stats">
-            <article><strong>15<sup>+</sup></strong><span>Years directing</span></article>
-            <article><strong>40<sup>+</sup></strong><span>Campaign stories</span></article>
-            <article><strong>20</strong><span>Project folders</span></article>
-            <article><strong>3</strong><span>Markets active</span></article>
-          </div>
-        </div>
-        <div>
-          <p>Aurelia shapes the visual world around watches: launches, editorial portfolios, boutique stories, collector campaigns, and still-life systems.</p>
-          <p>Her work combines disciplined grids, restrained colour, product hierarchy, macro texture, and a sharp editorial voice — allowing the craft of each timepiece to lead the image.</p>
-          <div class="tags"><span>Dubai</span><span>Paris</span><span>Geneva</span><span>Print & Digital</span><span>Luxury</span><span>Horology</span></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="artworks section-pad on-dark reveal">
-      <div class="section-heading"><p class="section-label">Main page artworks</p><h2>Four visual directions</h2></div>
-      <div class="artwork-grid">
-        <article><img src="assets/images/artworks/artwork-01.jpg" alt="Steel architecture artwork"><h3>Steel Architecture</h3><p>Bracelet, reflection, geometry.</p></article>
-        <article><img src="assets/images/artworks/artwork-02.jpg" alt="Chronograph energy artwork"><h3>Chronograph Energy</h3><p>Sport codes and red accents.</p></article>
-        <article><img src="assets/images/artworks/artwork-03.jpg" alt="Heritage dial artwork"><h3>Heritage Dial</h3><p>Classic symmetry and calm.</p></article>
-        <article><img src="assets/images/artworks/artwork-04.jpg" alt="Technical depth artwork"><h3>Technical Depth</h3><p>Black, steel, high contrast.</p></article>
-      </div>
-    </section>
-
-    <section id="clients" class="clients section-pad on-light reveal">
-      <div class="section-heading"><p class="section-label">Client directory</p><h2>Selected partners</h2></div>
-      <div class="client-directory" id="clientDirectory"></div>
-    </section>
-
-    <section id="projects" class="work on-dark reveal">
-      <div class="work-head"><p class="section-label">Selected work</p><h2>Campaigns, launches, editorials, and retail systems</h2></div>
-      <div class="filters" id="filters" aria-label="Project filters"></div>
-      <div class="project-grid" id="projectGrid"></div>
-    </section>
-
-    <section id="contact" class="contact section-pad on-dark reveal">
-      <p class="section-label">Get in touch</p>
-      <div class="contact-layout">
-        <div><h2>Let's make<br>something<br>worthy.</h2></div>
-        <div class="contact-card">
-          <a href="mailto:studio@example.com"><span>Email</span>studio@example.com</a>
-          <a href="https://instagram.com/" target="_blank" rel="noreferrer"><span>Instagram</span>@aureliavale.studio</a>
-          <a href="https://linkedin.com/" target="_blank" rel="noreferrer"><span>LinkedIn</span>aurelia-vale-cd</a>
-          <p><span>Location</span>Dubai · Paris · Geneva</p>
-        </div>
-      </div>
-    </section>
+    <section class="section-hero"   id="hero"></section>
+    <section class="section-clients" id="clients"></section>
+    <section class="section-projects" id="projects"></section>
+    <section class="section-about"  id="about"></section>
   </main>
 
-  <dialog class="project-modal" id="projectModal" aria-label="Project details">
-    <button class="modal-close" id="modalClose" aria-label="Close project">×</button>
-    <div class="modal-body" id="modalBody"></div>
-  </dialog>
+  <footer class="site-footer" id="contact"></footer>
 
-  <footer><p>© <span id="year"></span> Aurelia Vale Studio</p><p>Creative direction · Luxury watches · Campaign systems</p></footer>
-  <script src="assets/js/projects.js"></script>
-  <script src="assets/js/main.js"></script>
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Project detail">
+    <div class="modal-inner" id="modal-inner"></div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
