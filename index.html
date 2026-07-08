@@ -3,91 +3,123 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yara — Creative Director</title>
-<meta name="description" content="Yara — Creative Director. Creative Direction & Productions, Branding & Visual Identity.">
+<title>Visual Narrative — Yara</title>
 
-<!-- Fonts: Archivo (bold display) + Inter (body). Swap the family names here and in css/style.css to change fonts site-wide. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="../../../css/style.css">
 </head>
 <body>
 
-<!-- ============ NAV ============ -->
 <header class="nav">
-  <a href="index.html" class="nav__logo">YARA<sup>&reg;</sup></a>
+  <a href="../../../index.html" class="nav__logo">YARA<sup>&reg;</sup></a>
   <nav class="nav__links" id="navLinks">
-    <a href="#creative-direction">Work</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+    <a href="../../../index.html#creative-direction">Work</a>
+    <a href="../../../index.html#about">About</a>
+    <a href="../../../index.html#contact">Contact</a>
   </nav>
   <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
     <span></span><span></span>
   </button>
 </header>
 
-<!-- ============ INTRO ============ -->
-<section class="intro" id="about">
-  <!-- EDIT: your headline. Wrap any word in <span class="red"> to make it red. -->
-  <h1 class="intro__headline reveal">
-    Creative direction that turns ideas into <span class="red">bold</span> visual worlds.
-  </h1>
+<!-- ============ PROJECT HEADER — edit title / meta / description ============ -->
+<section class="gallery-header">
+  <a href="../../../index.html#creative-direction" class="back-link">&larr; Back to Work</a>
 
-  <div class="intro__bottom">
-    <!-- EDIT: your bio paragraph -->
-    <p class="intro__bio reveal">
-      I'm Yara, a creative director working across film, brand identity, and visual
-      storytelling. I lead productions and design systems from first concept to final
-      frame — always looking for the idea that makes people stop and look twice.
-    </p>
+  <span class="eyebrow red">Creative Direction — 01</span>
+  <h1 class="gallery-header__title reveal">Visual Narrative</h1>
 
-    <div class="intro__meta reveal">
-      <div>
-        <span class="eyebrow">Based in</span>
-        <span>Your City</span>
-      </div>
-      <div>
-        <span class="eyebrow">Available for</span>
-        <span>Selected projects</span>
-      </div>
+  <div class="gallery-header__meta reveal">
+    <div>
+      <span class="eyebrow">Role</span>
+      <span>Creative Director</span>
     </div>
-
-    <span class="scroll-cue">Scroll</span>
+    <div>
+      <span class="eyebrow">Year</span>
+      <span>2025</span>
+    </div>
+    <div>
+      <span class="eyebrow">Category</span>
+      <span>Film / Visual Narrative</span>
+    </div>
   </div>
+
+  <!-- EDIT: project description -->
+  <p class="gallery-header__desc reveal">
+    A short description of this project — the brief, the concept, and the creative
+    approach you took. Keep it to two or three sentences that set up the gallery below.
+  </p>
 </section>
 
-<!-- ============ SECTION 01 — CREATIVE DIRECTION & PRODUCTIONS ============ -->
-<section id="creative-direction">
-  <div class="section-label reveal">
-    <div>
-      <span class="eyebrow red">01 / Index</span>
-      <h2>Creative Direction<br>&amp; Productions</h2>
-    </div>
-    <!-- EDIT: short intro to this section -->
-    <p>Film, live events, and campaign direction — concepts brought to life on set and on screen.</p>
+<!-- ============ GALLERY —————————————————————————————————————
+     HOW TO ADD MEDIA:
+     1. Drop your image/video files into this project's /media/ folder.
+     2. Copy a <figure> block below and update the file path.
+     3. Two ways to add video — pick per clip:
+
+        A) Silent looping clip (like a Behance/Instagram reel — no sound, plays
+           automatically as it scrolls into view, pauses off-screen):
+           <video src="media/clip.mp4" muted loop playsinline
+                  preload="metadata" poster="media/clip-poster.jpg" data-autoplay></video>
+
+        B) Longer clip with sound (case study walkthrough, click to play):
+           <video src="media/clip.mp4" controls preload="metadata"
+                  poster="media/clip-poster.jpg"></video>
+
+        Tips:
+        - Export as MP4 (H.264), 1080p max, ~2–5 Mbps — keeps files small and
+          compatible everywhere. HandBrake or `ffmpeg -i in.mov -vcodec h264
+          -crf 23 out.mp4` both work well.
+        - Add a poster image (a still frame, same aspect ratio) so the space
+          doesn't flash black while the video loads.
+        - `muted playsinline` are required together for autoplay to work on iPhone.
+
+     4. To show two items side-by-side, wrap two <figure> blocks in
+        <div class="gallery-media gallery-media--pair"> ... </div>
+     ============================================================ -->
+<section class="gallery-media">
+  <figure class="reveal">
+    <img src="media/01.jpg" alt="Visual Narrative — image 1">
+  </figure>
+
+  <figure class="reveal">
+    <img src="media/02.jpg" alt="Visual Narrative — image 2">
+  </figure>
+
+  <div class="gallery-media gallery-media--pair reveal">
+    <figure>
+      <img src="media/03.jpg" alt="Visual Narrative — image 3">
+    </figure>
+    <figure>
+      <img src="media/04.jpg" alt="Visual Narrative — image 4">
+    </figure>
   </div>
 
-  <!-- PROJECT ROW — duplicate this <a class="project-row"> block to add a new project.
-       To add a project: 1) copy a project folder under /projects/creative-direction/
-       2) update the href, index number, title, and cover image below -->
-  <a class="project-row" href="projects/creative-direction/01-visual-narrative/index.html">
-    <img class="project-row__bg" src="projects/creative-direction/01-visual-narrative/cover.jpg" alt="Visual Narrative project cover">
-    <div class="project-row__content">
-      <div class="project-row__top">
-        <span class="eyebrow">Creative Direction</span>
-        <span class="project-row__index">01</span>
-      </div>
-      <div class="project-row__bottom">
-        <h3 class="project-row__title">Visual Narrative</h3>
-        <span class="project-row__view">View Project</span>
-      </div>
-    </div>
-  </a>
+  <!-- Example: silent looping video (uncomment and point to your file)
+  <figure class="reveal">
+    <video src="media/your-clip.mp4" muted loop playsinline
+           preload="metadata" poster="media/your-clip-poster.jpg" data-autoplay></video>
+  </figure>
+  -->
 
-  <a class="project-row" href="projects/creative-direction/02-live-production/index.html">
-    <img class="project-row__bg" src="projects/creative-direction/02-live-production/cover.jpg" alt="Live Production project cover">
+  <!-- Example: video with sound + controls (uncomment and point to your file)
+  <figure class="reveal">
+    <video src="media/your-reel.mp4" controls preload="metadata"
+           poster="media/your-reel-poster.jpg"></video>
+  </figure>
+  -->
+</section>
+
+<!-- ============ NEXT PROJECT ============ -->
+<section class="next-project">
+  <div class="next-project__label">
+    <span class="eyebrow red">Next Project</span>
+  </div>
+  <a class="project-row" href="../02-live-production/index.html">
+    <img class="project-row__bg" src="../02-live-production/cover.jpg" alt="Live Production project cover">
     <div class="project-row__content">
       <div class="project-row__top">
         <span class="eyebrow">Creative Direction</span>
@@ -99,83 +131,10 @@
       </div>
     </div>
   </a>
-
-  <a class="project-row" href="projects/creative-direction/03-film-direction/index.html">
-    <img class="project-row__bg" src="projects/creative-direction/03-film-direction/cover.jpg" alt="Film Direction project cover">
-    <div class="project-row__content">
-      <div class="project-row__top">
-        <span class="eyebrow">Creative Direction</span>
-        <span class="project-row__index">03</span>
-      </div>
-      <div class="project-row__bottom">
-        <h3 class="project-row__title">Film Direction</h3>
-        <span class="project-row__view">View Project</span>
-      </div>
-    </div>
-  </a>
 </section>
 
-<!-- ============ SECTION 02 — BRANDING & VISUAL IDENTITY ============ -->
-<section id="branding-identity">
-  <div class="section-label reveal">
-    <div>
-      <span class="eyebrow red">02 / Index</span>
-      <h2>Branding &amp;<br>Visual Identity</h2>
-    </div>
-    <p>Brand systems, logotypes, and packaging built to hold their own across every touchpoint.</p>
-  </div>
-
-  <a class="project-row" href="projects/branding-identity/01-brand-identity/index.html">
-    <img class="project-row__bg" src="projects/branding-identity/01-brand-identity/cover.jpg" alt="Brand Identity project cover">
-    <div class="project-row__content">
-      <div class="project-row__top">
-        <span class="eyebrow">Branding &amp; Visual Identity</span>
-        <span class="project-row__index">01</span>
-      </div>
-      <div class="project-row__bottom">
-        <h3 class="project-row__title">Brand Identity</h3>
-        <span class="project-row__view">View Project</span>
-      </div>
-    </div>
-  </a>
-
-  <a class="project-row" href="projects/branding-identity/02-visual-system/index.html">
-    <img class="project-row__bg" src="projects/branding-identity/02-visual-system/cover.jpg" alt="Visual System project cover">
-    <div class="project-row__content">
-      <div class="project-row__top">
-        <span class="eyebrow">Branding &amp; Visual Identity</span>
-        <span class="project-row__index">02</span>
-      </div>
-      <div class="project-row__bottom">
-        <h3 class="project-row__title">Visual System</h3>
-        <span class="project-row__view">View Project</span>
-      </div>
-    </div>
-  </a>
-
-  <a class="project-row" href="projects/branding-identity/03-packaging-design/index.html">
-    <img class="project-row__bg" src="projects/branding-identity/03-packaging-design/cover.jpg" alt="Packaging Design project cover">
-    <div class="project-row__content">
-      <div class="project-row__top">
-        <span class="eyebrow">Branding &amp; Visual Identity</span>
-        <span class="project-row__index">03</span>
-      </div>
-      <div class="project-row__bottom">
-        <h3 class="project-row__title">Packaging Design</h3>
-        <span class="project-row__view">View Project</span>
-      </div>
-    </div>
-  </a>
-</section>
-
-<!-- ============ FOOTER / CONTACT ============ -->
 <footer class="footer" id="contact">
-  <div class="footer__cta reveal">
-    <span class="eyebrow red">Contact</span>
-    <h2><a href="mailto:hello@yourdomain.com">Let's create<br>something bold.</a></h2>
-  </div>
-
-  <div class="footer__bottom">
+  <div class="footer__bottom" style="border-top:none; padding-top:0;">
     <span>&copy; <span id="year"></span> Yara. All rights reserved.</span>
     <div class="footer__socials">
       <a href="#" target="_blank" rel="noopener">Instagram</a>
@@ -185,6 +144,6 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="../../../js/main.js"></script>
 </body>
 </html>
