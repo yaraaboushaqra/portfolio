@@ -1,0 +1,516 @@
+/* =========================================================
+   YARA — Creative Director Portfolio
+   Design system: black / white / red, bold grotesk type
+   ========================================================= */
+
+:root {
+  --black: #0a0a0a;
+  --white: #f4f4f2;
+  --red: #ca021f;
+  --grey: #8a8a8a;
+  --grey-dark: #1a1a1a;
+  --border: rgba(244, 244, 242, 0.14);
+
+  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+
+  --gap: clamp(1.25rem, 3vw, 2.5rem);
+  --edge: clamp(1.25rem, 4vw, 3.5rem);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: clamp(0.7rem, 0.9vw, 0.85rem);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--grey);
+}
+
+.eyebrow.red {
+  color: var(--red);
+}
+
+/* =========================================================
+   NAV
+   ========================================================= */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--edge);
+  mix-blend-mode: difference;
+}
+
+.nav__logo {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+}
+
+.nav__links {
+  display: flex;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.nav__links a {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.nav__links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.25s ease;
+}
+
+.nav__links a:hover::after {
+  width: 100%;
+}
+
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav__toggle span {
+  width: 24px;
+  height: 2px;
+  background: var(--white);
+}
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.intro {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--edge);
+  padding-top: clamp(6rem, 14vh, 9rem);
+  border-bottom: 1px solid var(--border);
+}
+
+.intro__headline {
+  font-size: clamp(2.75rem, 9vw, 8rem);
+  max-width: 22ch;
+}
+
+.intro__headline .red {
+  color: var(--red);
+}
+
+.intro__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--gap);
+  margin-top: 3rem;
+}
+
+.intro__bio {
+  max-width: 42ch;
+  font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+  color: #d4d4d2;
+}
+
+.intro__meta {
+  display: flex;
+  gap: clamp(1.5rem, 4vw, 4rem);
+}
+
+.intro__meta div span {
+  display: block;
+}
+
+.intro__meta .eyebrow {
+  margin-bottom: 0.4rem;
+}
+
+.scroll-cue {
+  align-self: flex-end;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--grey);
+  writing-mode: vertical-rl;
+}
+
+/* =========================================================
+   SECTION LABEL (full width banner divider)
+   ========================================================= */
+
+.section-label {
+  padding: clamp(2rem, 6vw, 4rem) var(--edge);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--gap);
+  flex-wrap: wrap;
+}
+
+.section-label h2 {
+  font-size: clamp(1.75rem, 5vw, 3.5rem);
+}
+
+.section-label .eyebrow {
+  margin-bottom: 0.75rem;
+}
+
+.section-label p {
+  max-width: 32ch;
+  color: var(--grey);
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   PROJECT ROW (full-bleed horizontal banner)
+   ========================================================= */
+
+.project-row {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: clamp(60vh, 80vh, 92vh);
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-row__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(35%) brightness(0.7);
+  transform: scale(1.02);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+}
+
+.project-row:hover .project-row__bg {
+  transform: scale(1.08);
+  filter: grayscale(0%) brightness(0.55);
+}
+
+.project-row::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10,10,10,0.15) 0%, rgba(10,10,10,0.65) 100%);
+  pointer-events: none;
+}
+
+.project-row__content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: var(--edge);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-row__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.project-row__index {
+  font-family: var(--font-display);
+  font-weight: 900;
+  color: var(--red);
+  font-size: 1rem;
+}
+
+.project-row__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--gap);
+  flex-wrap: wrap;
+}
+
+.project-row__title {
+  font-size: clamp(2rem, 6vw, 5.5rem);
+}
+
+.project-row__view {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.project-row__view::after {
+  content: "\2197";
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.project-row:hover .project-row__view::after {
+  transform: translate(3px, -3px);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+  padding: clamp(3rem, 8vw, 6rem) var(--edge);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 6vw, 4rem);
+}
+
+.footer__cta h2 {
+  font-size: clamp(2rem, 7vw, 5.5rem);
+  max-width: 16ch;
+}
+
+.footer__cta a:hover {
+  color: var(--red);
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: clamp(1.5rem, 4vw, 2.5rem);
+  border-top: 1px solid var(--border);
+  font-size: 0.8rem;
+  color: var(--grey);
+}
+
+.footer__socials {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer__socials a:hover {
+  color: var(--red);
+}
+
+/* =========================================================
+   PROJECT / GALLERY PAGE
+   ========================================================= */
+
+.gallery-header {
+  padding: var(--edge);
+  padding-top: clamp(6rem, 14vh, 9rem);
+  border-bottom: 1px solid var(--border);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: clamp(2rem, 6vw, 4rem);
+}
+
+.back-link:hover {
+  color: var(--white);
+}
+
+.gallery-header__title {
+  font-size: clamp(2.5rem, 8vw, 6.5rem);
+  max-width: 20ch;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.gallery-header__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.gallery-header__meta .eyebrow {
+  margin-bottom: 0.4rem;
+}
+
+.gallery-header__desc {
+  max-width: 60ch;
+  font-size: clamp(1rem, 1.4vw, 1.2rem);
+  color: #d4d4d2;
+  padding-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.gallery-media {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-media figure {
+  width: 100%;
+}
+
+.gallery-media img,
+.gallery-media video {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: var(--grey-dark);
+}
+
+.gallery-media--pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+}
+
+.gallery-media--pair img,
+.gallery-media--pair video {
+  height: 100%;
+  object-fit: cover;
+}
+
+.next-project {
+  border-top: 1px solid var(--border);
+}
+
+.next-project__label {
+  padding: var(--edge);
+  padding-bottom: 0;
+}
+
+/* =========================================================
+   REVEAL ANIMATION
+   ========================================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 720px) {
+  .nav__links {
+    position: fixed;
+    inset: 0;
+    background: var(--black);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: var(--edge);
+    font-size: 1.5rem;
+    transform: translateY(-100%);
+    transition: transform 0.4s ease;
+    mix-blend-mode: normal;
+    z-index: 99;
+  }
+
+  .nav__links.is-open {
+    transform: translateY(0);
+  }
+
+  .nav__toggle {
+    display: flex;
+    z-index: 101;
+  }
+
+  .nav {
+    mix-blend-mode: normal;
+  }
+
+  .intro__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .scroll-cue {
+    display: none;
+  }
+
+  .gallery-media--pair {
+    grid-template-columns: 1fr;
+  }
+
+  .project-row__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
